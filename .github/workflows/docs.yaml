@@ -26,8 +26,8 @@ jobs:
     
     - name: Rebuild API and soft build pages
       run: |
-        python3 -m "docs/generateAPI.py"
-        python3 -m "docs/generatePages.py"
+        python3 "docs/generateAPI.py"
+        python3 "docs/generatePages.py"
     
     - name: Build docs
       run: |
