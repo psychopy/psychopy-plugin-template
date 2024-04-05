@@ -20,10 +20,14 @@ changelog = "https://github.com/psychopy/psychopy-plugin-template/blob/main/CHAN
 [project.optional-dependencies]
 # dependencies for building the docs
 docs = [
+  "psychopy",
   "mkdocs",
   "mkdocstrings",
   "mkdocstrings-python",
-  "mkapi",
+  "mkdocs-literate-nav",
+  "mkdocs-section-index ",
+  "mkdocs-material",
+  "mkdocs-material-extensions",
 ]
 # dependencies for running the test suite
 tests = [
