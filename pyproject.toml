@@ -21,6 +21,7 @@ changelog = "https://github.com/psychopy/psychopy-plugin-template/blob/main/CHAN
 # dependencies for building the docs
 docs = [
   "psychopy@git+https://github.com/psychopy/psychopy-lib",
+  "esprima",
   "mkdocs",
   "mkdocstrings",
   "mkdocstrings-python",
