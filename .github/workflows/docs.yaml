@@ -18,7 +18,7 @@ jobs:
         
     - name: Install package and dependencies
       run: |
-        python3 -m pip install -e .[doc]
+        python3 -m pip install -e .[docs]
     
     - name: Rebuild API and soft build pages
       run: |
