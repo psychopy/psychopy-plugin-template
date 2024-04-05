@@ -20,7 +20,7 @@ changelog = "https://github.com/psychopy/psychopy-plugin-template/blob/main/CHAN
 [project.optional-dependencies]
 # dependencies for building the docs
 docs = [
-  "git+https://github.com/psychopy/psychopy-lib",
+  "psychopy@git+https://github.com/psychopy/psychopy-lib",
   "mkdocs",
   "mkdocstrings",
   "mkdocstrings-python",
