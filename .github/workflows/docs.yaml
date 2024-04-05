@@ -18,8 +18,7 @@ jobs:
     
     - name: Install psychopy
       run: |
-        pip install esprima
-        pip install psychopy@git+https://github.com/psychopy/psychopy-lib
+        pip install psychopy --prefer-binary
     
     - name: Install package and dependencies
       run: |
