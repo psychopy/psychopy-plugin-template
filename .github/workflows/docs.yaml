@@ -18,8 +18,10 @@ jobs:
     
     - name: Install psychopy
       run: |
+        pip install --upgrade pip
         pip install wheel six attrdict3
-        pip install psychopy --prefer-binary
+        pip install wxPython==4.1.1 --prefer-binary
+        pip install psychopy
     
     - name: Install package and dependencies
       run: |
