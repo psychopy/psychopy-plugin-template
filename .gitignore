@@ -1,0 +1,16 @@
+# For trying stuff out
+scratch.*
+# Google Drive
+desktop.ini
+# Python environment
+.venv*
+venv*
+__pycache__
+.pytest-cache
+# VS Code
+.idea
+.code-profile
+.vscode
+# PIP
+.pdm-build
+*.egg-info

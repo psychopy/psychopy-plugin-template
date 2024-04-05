@@ -1,0 +1,4 @@
+
+
+class ExampleResponseDevice:
+    pass
