@@ -5,7 +5,7 @@ on: push
 jobs:
   build:
     name: Build docs
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
     - name: Checkout
@@ -20,7 +20,6 @@ jobs:
       run: |
         pip install --upgrade pip
         pip install wheel six attrdict3
-        pip install wxPython==4.1.1 --prefer-binary
         pip install psychopy
     
     - name: Install package and dependencies
