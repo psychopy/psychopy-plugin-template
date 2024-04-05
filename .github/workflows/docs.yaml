@@ -18,6 +18,7 @@ jobs:
 
     - name: Install dependencies
       run: |
+        python3 -m pip install psychopy
         python3 -m pip install mkdocs mkdocstrings mkdocstrings-python mkdocs-literate-nav mkdocs-section-index mkdocs-material mkdocs-material-extensions
         
     - name: Install own package
