@@ -18,11 +18,8 @@ jobs:
     
     - name: Install psychopy
       run: |
-        pip install wheel
-        pip install six  # for configobj and wxpython
-        pip install distro  # used by createInitFile
-        pip install attrdict3  # used by wxpython setup
-        pip install psychopy
+        pip install esprima
+        pip install psychopy@git+https://github.com/psychopy/psychopy-lib
     
     - name: Install package and dependencies
       run: |
