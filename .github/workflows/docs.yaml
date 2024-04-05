@@ -1,0 +1,51 @@
+name: Publish docs
+
+on: push
+
+jobs:
+  build:
+    name: Build docs
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+
+    - name: Install dependencies
+      run: |
+        python3 -m pip install mkdocs mkdocstrings mkdocstrings-python mkdocs-literate-nav mkdocs-section-index mkdocs-material mkdocs-material-extensions
+        
+    - name: Install own package
+      run: |
+        python3 -m pip install -e .
+    
+    - name: Rebuild API and soft build pages
+      run: |
+        python3 -m "docs/generateAPI.py"
+        python3 -m "docs/generatePages.py"
+    
+    - name: Build docs
+      run: |
+        mkdocs build
+    
+    - name: Move docs to hosted folder
+      run: |
+        mv docs docs_src
+        mv site docs
+
+    - name: Commit
+      run: |
+        git add --all
+        git commit --all -m "sys: Build documentation"
+    
+    - name: Push
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+        force: true
