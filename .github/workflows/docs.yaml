@@ -18,6 +18,7 @@ jobs:
     
     - name: Install psychopy
       run: |
+        pip install wheel six attrdict3
         pip install psychopy --prefer-binary
     
     - name: Install package and dependencies
