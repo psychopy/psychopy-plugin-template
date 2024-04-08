@@ -139,11 +139,9 @@ code {
 }
 
 .md-header {
-    display: grid;
-    grid-template-columns:11rem 50rem;
-    justify-content: center;
-
-    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    padding: 0rem calc((100vw - 61rem) / 2) 1rem calc((100vw - 61rem) / 2);
 }
 
 .md-header--shadow {
