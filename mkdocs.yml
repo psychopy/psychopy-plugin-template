@@ -1,5 +1,5 @@
 site_name: PsychoPy Plugin Example
-docs_dir: docs
+docs_dir: docs_md
 site_dir: site
 
 theme:
