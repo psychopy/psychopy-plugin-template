@@ -2,13 +2,12 @@ from pathlib import Path
 import shutil
 import time
 
+# specify path to docs source folder
+docsFolder = Path(__file__).parent
 # specify path to root folder (containing the pyproject.toml)
-rootFolder = Path(__file__).parent.parent
+rootFolder = docsFolder.parent
 # specify path for the module folder (will be the first folder found which contains an __init__.py)
 modFolder = list(rootFolder.glob("*/__init__.py"))[0].parent
-# specify path to docs source folder
-docsFolder = rootFolder / "docs"
-docsFolder.mkdir(parents=True, exist_ok=True)
 # specify path to api folder
 apiFolder = docsFolder / "api"
 # clear api folder

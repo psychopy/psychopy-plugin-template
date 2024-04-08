@@ -13,11 +13,10 @@ from psychopy.experiment import Experiment
 # if running with `--hard` set, delete existing files
 hard = "--hard" in sys.argv
 
-# specify path to root folder (containing the pyproject.toml)
-rootFolder = Path(__file__).parent.parent
 # specify path to docs source folder
-docsFolder = rootFolder / "docs"
-docsFolder.mkdir(exist_ok=True)
+docsFolder = Path(__file__).parent
+# specify path to root folder (containing the pyproject.toml)
+rootFolder = docsFolder.parent
 # make sure there's an index file
 if not (docsFolder / "index.md").is_file():
     (docsFolder / "index.md").write_text("")
@@ -43,14 +42,16 @@ def writeBuilderDocs(cls: type, group: str):
         file.parent.mkdir(parents=True, exist_ok=True)
     # make sure builder folder has an index file
     if not (file.parent.parent / "index.md").is_file():
-        (file.parent.parent / "index.md").write_text(
-            "Elements which this plugin adds to the Builder interface of PsychoPy."
+        content = (
+            "Use the sidebar to navigate through the Builder elements added to the PsychoPy app by this plugin."
         )
+        (file.parent / "index.md").write_text(content)
     # make sure folder has an index file
     if not (file.parent / "index.md").is_file():
-        (file.parent / "index.md").write_text(
-            "Elements which this plugin adds to the PsychoPy library."
+        content = (
+            f"Use the sidebar to navigate through the {group.title()}s added to the PsychoPy app by this plugin."
         )
+        (file.parent / "index.md").write_text(content)
     # skip if file exists, unless we're running in hard mode
     if file.is_file() and not hard:
         return
@@ -126,7 +127,10 @@ def writeCoderDocs(obj: type):
         file.parent.mkdir(parents=True, exist_ok=True)
     # make sure folder has an index file
     if not (file.parent / "index.md").is_file():
-        (file.parent / "index.md").write_text("")
+        content = (
+            "Use the sidebar to navigate through the code elements added to the PsychoPy library by this plugin."
+        )
+        (file.parent / "index.md").write_text(content)
     # skip if file exists, unless we're running in hard mode
     if file.is_file() and not hard:
         return

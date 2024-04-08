@@ -1,1 +1,0 @@
-Elements which this plugin adds to the Builder interface of PsychoPy.
