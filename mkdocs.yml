@@ -8,8 +8,18 @@ theme:
     - content.tooltips 
     - navigation.expand 
     - navigation.indexes 
-    - navigation.sections 
+    - navigation.sections
     - navigation.tabs
+    - navigation.tabs.sticky
+  logo: _style/logo@2x.png
+  favicon: _style/favicon.png
+  palette:
+    scheme: psychopy
+  repo_url: https://github.com/TEParsons/psychopy-example-plugin
+  repo_icon: fontawesome/brands/github
+
+extra_css:
+  - _style/psychopy.css
 
 markdown_extensions:
   - nl2br
@@ -25,7 +35,7 @@ plugins:
           options:
             docstring_style: numpy
             show_root_heading: false
-            show_submodules: false
+            show_submodules: true
             inherited_members: true
             group_by_category: true
             show_if_no_docstring: true
