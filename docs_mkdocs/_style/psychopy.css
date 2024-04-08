@@ -157,13 +157,15 @@ code {
 }
 
 .md-header,
-.md-tabs {
+.md-tabs,
+.md-nav__title {
     background-color: var(--white);
     color: var(--offblack);
 }
 
 .md-tabs__list {
     justify-content: end;
+    align-items: center;
 }
 
 .md-tabs__item {
