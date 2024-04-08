@@ -24,12 +24,12 @@ jobs:
     
     - name: Install package and dependencies
       run: |
-        python3 -m pip install -e .[docs]
+        python3 -m pip install -e .[docs-mkdocs]
     
     - name: Rebuild API and soft build pages
       run: |
-        python3 "docs/generateAPI.py"
-        python3 "docs/generatePages.py"
+        python3 "docs_mkdocs/generateAPI.py"
+        python3 "docs_mkdocs/generatePages.py"
     
     - name: Build docs
       run: |
