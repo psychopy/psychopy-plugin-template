@@ -34,11 +34,6 @@ jobs:
     - name: Build docs
       run: |
         mkdocs build
-    
-    - name: Move docs to hosted folder
-      run: |
-        mv docs docs_src
-        mv site docs
 
     - name: Commit
       run: |
