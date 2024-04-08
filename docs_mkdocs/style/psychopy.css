@@ -202,3 +202,10 @@ code {
 .md-tabs__item--active {
     font-weight: bold;
 }
+
+.md-footer-meta__inner {
+    flex-direction: row-reverse;
+}
+.md-copyright {
+    text-align: right;
+}
