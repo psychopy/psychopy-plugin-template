@@ -1,6 +1,13 @@
 site_name: PsychoPy Plugin Example
 docs_dir: docs_mkdocs
 site_dir: docs
+copyright: |
+  © 2002-2018 Jonathan Peirce
+  © 2019 Open Science Tools Ltd.
+  Supported by the University of Nottingham.
+  PsychoPy® and Pavlovia® are registered trademarks of Open Science Tools Ltd.
+repo_url: https://github.com/TEParsons/psychopy-example-plugin
+repo_name: psychopy-example-plugin
 
 theme:
   name: material 
@@ -11,15 +18,17 @@ theme:
     - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.footer
   logo: style/logo@2x.png
   favicon: style/favicon.png
   palette:
     scheme: psychopy
-  repo_url: https://github.com/TEParsons/psychopy-example-plugin
-  repo_icon: fontawesome/brands/github
+
+extra:
+  generator: false
 
 extra_css:
-  - _style/psychopy.css
+  - style/psychopy.css
 
 markdown_extensions:
   - nl2br
