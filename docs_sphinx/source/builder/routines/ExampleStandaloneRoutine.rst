@@ -11,7 +11,7 @@ Parameters
 -------------------------------
 
 Basic
-======
+=================
 
 `name`
     Name of this routine (alphanumeric or _, no spaces)
@@ -28,7 +28,7 @@ Basic
     - condition
 
 Testing
-======
+=================
 
 `Disable routine`
     Disable this routine

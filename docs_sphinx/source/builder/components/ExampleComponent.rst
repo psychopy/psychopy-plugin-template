@@ -12,7 +12,7 @@ Parameters
 -------------------------------
 
 Basic
-======
+=================
 
 Name
     Name of this component (alphanumeric or _, no spaces)
@@ -48,7 +48,7 @@ Expected duration (s)
     (Optional) expected duration (s), purely for representing in the timeline
 
 Data
-======
+=================
 
 Save onset/offset times
     Store the onset/offset times in the data file (as well as in the log file).
@@ -57,7 +57,7 @@ Sync timing with screen refresh
     Synchronize times with screen refresh (good for visual stimuli and responses based on them)
 
 Testing
-======
+=================
 
 Disable component
     Disable this component
