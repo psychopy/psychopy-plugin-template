@@ -9,12 +9,18 @@ Welcome to psychopy-template's documentation!
 The `psychopy-template` plugin is designed to show you how to make a plugin.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Builder Components:
+   :maxdepth: 1
+   :caption: Added content for Builder
+   :glob:
+
+   builder/**/*
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Library Components (API):
+   :maxdepth: 1
+   :caption: Added content for Coder
+   :glob:
+
+   coder/*
 
 Indices and tables
 ==================

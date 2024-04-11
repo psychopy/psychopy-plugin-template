@@ -29,7 +29,8 @@ docs-mkdocs = [
   "mkdocs-material-extensions",
 ]
 docs-sphinx = [
-  "sphinx"
+  "sphinx",
+  "furo",
 ]
 # dependencies for running the test suite
 tests = [
