@@ -26,7 +26,7 @@ jobs:
     
     - name: Bypass Jekyll
       run: |
-        type NUL > docs/.nojekyll
+        echo "" > docs/.nojekyll
 
     - name: Commit
       run: |
