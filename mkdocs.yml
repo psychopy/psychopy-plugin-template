@@ -19,6 +19,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.footer
+    - navigation.path
   logo: style/logo@2x.png
   favicon: style/favicon.png
   palette:
@@ -33,6 +34,8 @@ extra_css:
 
 markdown_extensions:
   - nl2br
+  - toc:
+      toc_depth: 0
 
 plugins:
   # this extension handles turning Python code into nicely formatted markdown docs
