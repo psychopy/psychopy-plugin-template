@@ -20,13 +20,9 @@ jobs:
       run: |
         python3 -m pip install -e .[docs-sphinx]
     
-    - name: Rebuild API and soft build pages
-      run: |
-        python3 "docs_mkdocs/generateAPI.py"
-    
     - name: Build docs
       run: |
-        mkdocs build
+        sphinx-build docs_sphinx/source docs
 
     - name: Commit
       run: |
