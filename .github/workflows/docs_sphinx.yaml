@@ -23,6 +23,10 @@ jobs:
     - name: Build docs
       run: |
         sphinx-build docs_sphinx/source docs
+    
+    - name: Bypass Jekyll
+      run: |
+        type NUL > docs/.nojekyl
 
     - name: Commit
       run: |

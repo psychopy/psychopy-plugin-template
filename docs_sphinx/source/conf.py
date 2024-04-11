@@ -29,6 +29,8 @@ extensions = [
     'sphinx.ext.viewcode'
 ]
 
+html_static_path = ["static"]
+
 
 
 # -- Options for HTML output -------------------------------------------------
