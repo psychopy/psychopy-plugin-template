@@ -10,7 +10,10 @@ See Components and Routines added to PsychoPy Builder by this plugin.
 See classes and functions added to the PsychoPy library by this plugin.
 
 ### [Full API](api/index.md)
-See the full code structure of this plugin
+::: psychopy_example_plugin
+    options:
+        show_docstring_description: false
+        
 
 ### [psychopy.org](https://psychopy.org)
 Go to the main PsychoPy website.

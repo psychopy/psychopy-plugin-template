@@ -23,6 +23,7 @@ theme:
   favicon: style/favicon.png
   palette:
     scheme: psychopy
+  custom_dir: docs_mkdocs/overrides
 
 extra:
   generator: false
