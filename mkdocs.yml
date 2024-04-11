@@ -52,6 +52,7 @@ plugins:
             show_labels: false
             merge_init_into_class: true
             show_root_toc_entry: false
+            docstring_section_style: list
             
   # this extension lets generatePages add items to the nav bar by writing to a file
   - literate-nav:
