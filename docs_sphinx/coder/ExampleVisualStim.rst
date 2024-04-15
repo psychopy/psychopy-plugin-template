@@ -10,4 +10,5 @@ or, any time after `psychopy.plugins.activatePlugins` has been called:
 from psychopy.visual import ExampleVisualStim
 ```
 
-.. automodule:: psychopy_example_plugin.visual.exampleVisualStim.ExampleVisualStim
+.. autoclass:: psychopy_example_plugin.visual.exampleVisualStim.ExampleVisualStim
+    :members:

@@ -10,4 +10,5 @@ or, any time after `psychopy.plugins.activatePlugins` has been called:
 from psychopy.hardware import ExampleDevice
 ```
 
-.. automodule:: psychopy_example_plugin.hardware.exampleDevice.ExampleDevice
+.. autoclass:: psychopy_example_plugin.hardware.exampleDevice.ExampleDevice
+    :members:
