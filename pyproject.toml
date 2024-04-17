@@ -36,8 +36,8 @@ docs-sphinx = [
 ]
 # dependencies for running the test suite
 tests = [
-    "pytest",
-    "psychopy",
+  "psychopy",
+  "pytest",
 ]
 
 [project.entry-points."psychopy.experiment.components"]
