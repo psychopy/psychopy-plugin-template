@@ -3,7 +3,7 @@ name: Run tests
 on:
   workflow_dispatch:  # manual
   pull_request:
-    branches: [ release, dev ]
+    branches: [ main ]
 
 jobs:
   mac-tests:
