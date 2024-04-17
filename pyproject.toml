@@ -36,7 +36,7 @@ docs-sphinx = [
 ]
 # dependencies for running the test suite
 tests = [
-  "psychopy",
+  "git+https://github.com/psychopy/psychopy@release",
   "pytest",
 ]
 
