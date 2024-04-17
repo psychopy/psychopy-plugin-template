@@ -3,14 +3,14 @@ Tests for the ExampleComponent class, essentially showcases how to implement bas
 """
 
 from psychopy_example_plugin.components.exampleComponent import ExampleComponent
-import psychopy.tests.test_experiment.test_components.test_base_component import BaseComponentTests
+from psychopy.tests.test_experiment.test_components.test_base_component import BaseComponentTests
 
 class TestExampleComponent(BaseComponentTests):
     """
     Creating a subclass of _TestBaseComponentsMixin means that your testing class will inherit all of its methods - and will therefore run its tests on your Component. Just make sure to specify the Component class in the class attributes.
 
     Attributes
-    ----------
+    ----------`
     comp : type
         Component class to run tests on
     """
