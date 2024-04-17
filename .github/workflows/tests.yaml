@@ -42,7 +42,7 @@ jobs:
         
         - name: Prepare to build wx
           run: |
-            python3 -m pip install wheel, six, distro, attrdict3
+            python3 -m pip install wheel six distro attrdict3
         
         - name: Install package and dependencies
           run: |
