@@ -16,4 +16,8 @@ class ExampleVisualStim(BaseVisualStim):
     autoLog : bool
         Whether to automatically log any changes to stimulus' attributes
     """
-    pass
+    def draw(self):
+        """
+        Your stimulus class needs to define a `draw` function - otherwise you'll hit a NotImplementedError at the first win flip!
+        """
+        return

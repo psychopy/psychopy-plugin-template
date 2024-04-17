@@ -16,6 +16,8 @@ class TestExampleComponent(BaseComponentTests):
     """
     comp = ExampleComponent
 
+    # --- Tests ---
+
     def test_example(self):
         """
         You can add additional tests by adding methods to this class - remember that you can get the Component class via `self.comp`

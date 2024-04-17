@@ -3,15 +3,14 @@ Tests for the ExampleVisualStim class, essentially showcases how to implement ba
 """
 
 
-from psychopy.tests.test_visual.test_basevisual import _TestColorMixin, _TestUnitsMixin
 from psychopy import visual
 from psychopy_example_plugin.visual.exampleVisualStim import ExampleVisualStim
 
 
-class TestExampleVisualStim(_TestColorMixin, _TestUnitsMixin):
+class TestExampleVisualStim:
     def setup_class(self):
         """
-        This method is run when the TestExampleVisualStim class is initialised, before any of the test methods.
+        This method is run when the TestExampleVisualStim class is initialised, before any of the test methods. Use it to setup things which you only want to happen once - like creating a window.
         """
         # make a Window
         self.win = visual.Window(
@@ -19,18 +18,32 @@ class TestExampleVisualStim(_TestColorMixin, _TestUnitsMixin):
             monitor="testMonitor", allowGUI=False,
             autoLog=False
         )
-        
+    
+    def teardown_class(self):
+        """
+        This method is run after all tests have completed.
+        """
+        # close the window
+        self.win.close()
+    
+    def setup_method(self):
+        """
+        This method is run before each test starts. Use it to setup things which you want to be fresh at the start of each test, like creating the stimulus object.
+        """
         # create an instance of the class to test
         self.obj = ExampleVisualStim(
             self.win, units="height", name="testExampleStim", autoLog=True
         )
-
-        # as this stimulus doesn't actually draw, mark it as not using any of the standard color attributes
-        self.borderUsed = self.fillUsed = self.foreUsed = False
-        # if we were to test a color, we'd need to specify which pixel on the window (from top left) we expect to be that color
-        self.borderPoint = (16, 16)
-        self.fillPoint = (32, 32)
-        self.forePoint = (64, 64)
+    
+    def teardown_method(self):
+        """
+        This method is run after each test finishes. Use it to clean up after each test, like deleting the stimulus object (ready to be recreated by setup_method)
+        """
+        # delete the instance of this class
+        del self.obj
+        self.obj = None
+    
+    # --- Tests ---
     
     def test_example(self):
         """
