@@ -40,6 +40,10 @@ jobs:
           with:
             python-version: "3.10"
         
+        - name: Prepare to build wx
+          run: |
+            python3 -m pip install wheel, six, distro, attrdict3
+        
         - name: Install package and dependencies
           run: |
             python3 -m pip install -e .[tests]
