@@ -1,6 +1,9 @@
 name: Run tests
 
-on: push
+on:
+  workflow_dispatch:  # manual
+  pull_request:
+    branches: [ release, dev ]
 
 jobs:
   mac-tests:
@@ -27,3 +30,20 @@ jobs:
   linux-tests:
     name: Run tests on Linux
     runs-on: ubuntu-latest
+
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+    
+        - name: Set up Python
+          uses: actions/setup-python@v4
+          with:
+            python-version: "3.10"
+        
+        - name: Install package and dependencies
+          run: |
+            python3 -m pip install -e .[tests]
+        
+        - name: Run tests
+          run: |
+            pytest
