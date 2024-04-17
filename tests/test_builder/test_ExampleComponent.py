@@ -3,7 +3,7 @@ Tests for the ExampleComponent class, essentially showcases how to implement bas
 """
 
 from psychopy_example_plugin.components.exampleComponent import ExampleComponent
-import psychopy
+import psychopy.tests.test_experiment.test_components.test_base_component import BaseComponentTests
 
 class TestExampleComponent(BaseComponentTests):
     """
