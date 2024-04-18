@@ -28,7 +28,7 @@ jobs:
         pytest
   
   windows-tests:
-    name: Run tests on Mac
+    name: Run tests on Windows
     runs-on: windows-latest
 
     steps:
