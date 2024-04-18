@@ -1,1 +1,0 @@
-::: psychopy_example_plugin.visual.exampleVisualStim

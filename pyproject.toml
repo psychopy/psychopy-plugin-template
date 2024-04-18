@@ -19,17 +19,7 @@ changelog = "https://github.com/psychopy/psychopy-plugin-template/blob/main/CHAN
 
 [project.optional-dependencies]
 # dependencies for building the docs
-docs-mkdocs = [
-  "psychopy",
-  "mkdocs",
-  "mkdocstrings",
-  "mkdocstrings-python",
-  "mkdocs-literate-nav",
-  "mkdocs-section-index ",
-  "mkdocs-material",
-  "mkdocs-material-extensions",
-]
-docs-sphinx = [
+docs = [
   "psychopy",
   "sphinx",
   "furo",
