@@ -12,3 +12,5 @@ from psychopy.visual import ExampleVisualStim
 
 .. autoclass:: psychopy_example_plugin.visual.exampleVisualStim.ExampleVisualStim
     :members:
+    :undoc-members:
+    :inherited-members:

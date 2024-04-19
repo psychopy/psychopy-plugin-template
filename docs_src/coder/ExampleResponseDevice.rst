@@ -12,3 +12,5 @@ from psychopy.hardware import ExampleResponseDevice
 
 .. autoclass:: psychopy_example_plugin.hardware.exampleResponseDevice.ExampleResponseDevice
     :members:
+    :undoc-members:
+    :inherited-members:
