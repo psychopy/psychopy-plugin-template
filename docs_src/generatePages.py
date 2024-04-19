@@ -12,9 +12,6 @@ from psychopy.experiment import Experiment
 docsFolder = Path(__file__).parent
 # specify path to root folder (containing the pyproject.toml)
 rootFolder = docsFolder.parent
-# make sure there's an index file
-if not (docsFolder / "index.md").is_file():
-    (docsFolder / "index.md").write_text("")
 # create a dummy experiment so we can initialize comps/routines to inspect their params
 exp = Experiment()
 # get path for the module folder (will be the first folder found which contains an __init__.py)
