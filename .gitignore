@@ -11,6 +11,7 @@ __pycache__
 .idea
 .code-profile
 .vscode
+*.code-workspace
 # PIP
 .pdm-build
 *.egg-info
