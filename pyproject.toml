@@ -11,6 +11,8 @@ authors = [
 ]
 # a license tells other people how to use your code and protects you from stealing
 license = { text = "MIT" }
+# add any packages which your plugin needs in order to run
+dependencies = []
 
 [project.urls]
 # some handy links to help people find your plugin's documentation
