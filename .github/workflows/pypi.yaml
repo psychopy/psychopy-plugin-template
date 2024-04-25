@@ -31,5 +31,6 @@ jobs:
             twine upload dist/* --repository pypi -u __token__ -p ${{ secrets.PYPI_API_TOKEN }}
         
         - name: Upload to TestPyPi
+          if: startsWith(github.ref, 'refs/tags/') == false
           run: |
             twine upload dist/* --repository testpypi -u __token__ -p ${{ secrets.TESTPYPI_API_TOKEN }}
