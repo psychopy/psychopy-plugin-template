@@ -1,6 +1,6 @@
 [project]
 # the name of your plugin (required)
-name = "psychopy-example-plugin"
+name = "psychopy-plugin-template"
 # the current version of the plugin (required)
 version = "0.0.1" 
 # a brief description of what your plugin does

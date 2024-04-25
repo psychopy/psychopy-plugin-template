@@ -1,5 +1,7 @@
 # For trying stuff out
 scratch.*
+# PyPi
+dist/
 # Google Drive
 desktop.ini
 # Python environment
