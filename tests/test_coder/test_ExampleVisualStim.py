@@ -4,7 +4,7 @@ Tests for the ExampleVisualStim class, essentially showcases how to implement ba
 
 
 from psychopy import visual
-from psychopy_example_plugin.visual.exampleVisualStim import ExampleVisualStim
+from psychopy_plugin_template.visual.exampleVisualStim import ExampleVisualStim
 
 
 class TestExampleVisualStim:

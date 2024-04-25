@@ -2,8 +2,8 @@
 Tests for the ExampleComponent class, essentially showcases how to implement basic tests on a Component.
 """
 
-from psychopy_example_plugin.components.exampleComponent import ExampleComponent
-from psychopy_example_plugin.visual.exampleVisualStim import ExampleVisualStim
+from psychopy_plugin_template.components.exampleComponent import ExampleComponent
+from psychopy_plugin_template.visual.exampleVisualStim import ExampleVisualStim
 from psychopy.tests.test_experiment.test_components.test_base_components import BaseComponentTests, _TestLibraryClassMixin
 
 class TestExampleComponent(BaseComponentTests, _TestLibraryClassMixin):
