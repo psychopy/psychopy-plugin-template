@@ -61,6 +61,10 @@ ExamplePluginRibbonSection = "psychopy_plugin_template.app.ribbon:ExamplePluginR
 # if you want to add a section to the PsychoPy Runner ribbon, add it here
 ExamplePluginRibbonSection = "psychopy_plugin_template.app.ribbon:ExamplePluginRibbonSection"
 
+[project.entry-points."psychopy.app.themes.icons"]
+# if you want to add icons to the PsychoPy app, add them here
+example = "psychopy_plugin_template.icons.example"
+
 [tool.setuptools.package-data]
 # any resources you want including in the package, add their file extensions here (e.g. "*.wav" if you want audio files)
 "*" = ["*.png"] 
