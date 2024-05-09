@@ -2,7 +2,7 @@
 # the name of your plugin (required)
 name = "psychopy-plugin-template"
 # the current version of the plugin (required)
-version = "0.0.3" 
+version = "0.0.4" 
 # a brief description of what your plugin does
 description = "Tutorial on how to create a plugin component for both PsychoPy and PsychoJS"
 # contact information for yourself and anyone else who worked on the plugin 
