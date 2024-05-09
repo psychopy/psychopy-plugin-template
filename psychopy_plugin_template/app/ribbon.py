@@ -12,7 +12,7 @@ class ExamplePluginRibbonSection(FrameRibbonPluginSection):
         self.addButton(
             "exampleBtn", 
             label="Example button", 
-            icon="globe", 
+            icon="example", 
             tooltip="Open the documentation for psychopy-plugin-template", 
             callback=self.openExamplePluginDocs, 
             style=wx.BU_NOTEXT
