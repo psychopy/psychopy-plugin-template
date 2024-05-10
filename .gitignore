@@ -2,6 +2,7 @@
 scratch.*
 # PyPi
 dist/
+build/
 # Google Drive
 desktop.ini
 # Python environment

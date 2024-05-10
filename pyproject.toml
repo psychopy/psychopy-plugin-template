@@ -2,7 +2,7 @@
 # the name of your plugin (required)
 name = "psychopy-plugin-template"
 # the current version of the plugin (required)
-version = "0.0.3" 
+version = "0.0.4" 
 # a brief description of what your plugin does
 description = "Tutorial on how to create a plugin component for both PsychoPy and PsychoJS"
 # link to the README.md file for a longer description of the project
@@ -50,6 +50,22 @@ ExampleVisualStim = "psychopy_plugin_template.visual.exampleVisualStim:ExampleVi
 # if you want something to be importable from psychopy.hardware, add it here
 ExampleDevice = "psychopy_plugin_template.hardware.exampleDevice:ExampleDevice"
 ExampleResponseDevice = "psychopy_plugin_template.hardware.exampleResponseDevice:ExampleResponseDevice"
+
+[project.entry-points."psychopy.app.builder"]
+# if you want to add a section to the PsychoPy Builder ribbon, add it here
+ExamplePluginRibbonSection = "psychopy_plugin_template.app.ribbon:ExamplePluginRibbonSection"
+
+[project.entry-points."psychopy.app.coder"]
+# if you want to add a section to the PsychoPy Coder ribbon, add it here
+ExamplePluginRibbonSection = "psychopy_plugin_template.app.ribbon:ExamplePluginRibbonSection"
+
+[project.entry-points."psychopy.app.runner"]
+# if you want to add a section to the PsychoPy Runner ribbon, add it here
+ExamplePluginRibbonSection = "psychopy_plugin_template.app.ribbon:ExamplePluginRibbonSection"
+
+[project.entry-points."psychopy.app.themes.icons"]
+# if you want to add icons to the PsychoPy app, add them here
+example = "psychopy_plugin_template.icons.example"
 
 [tool.setuptools.package-data]
 # any resources you want including in the package, add their file extensions here (e.g. "*.wav" if you want audio files)
