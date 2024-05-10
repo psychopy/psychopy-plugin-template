@@ -5,6 +5,8 @@ name = "psychopy-plugin-template"
 version = "0.0.3" 
 # a brief description of what your plugin does
 description = "Tutorial on how to create a plugin component for both PsychoPy and PsychoJS"
+# link to the README.md file for a longer description of the project
+readme = "README.md"
 # contact information for yourself and anyone else who worked on the plugin 
 authors = [
   { name = "OST Science Team", email = "science@opensceincetools.org" },
