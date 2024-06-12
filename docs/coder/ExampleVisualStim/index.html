@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ExampleVisualStim &#8212; PsychoPy Example Plugin 0.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=536c50fe" />
+    <link rel="stylesheet" type="text/css" href="../../_static/psychopy.css?v=b9f4e6dd" />
+    <script src="../../_static/documentation_options.js?v=d20be8f5"></script>
+    <script src="../../_static/doctools.js?v=b682be12"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="prev" title="ExampleResponseDevice" href="../ExampleResponseDevice/" />
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4089651-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-4089651-2');
+    </script>
+
+    <!-- Matomo -->
+    <script>
+      var _paq = window._paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["setCookieDomain", "*.psychopy.org"]);
+      _paq.push(["setDomains", ["*.psychopy.org","*.discourse.psychopy.org"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//analytics.opensciencetools.org/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '3']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//analytics.opensciencetools.org/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+    <!-- End Matomo Code -->
+
+
+  </head><body>
+
+<!-- The social media icon bar -->
+<div class="social-bar">
+  <a href="" class="github">
+    <i class="fab fa-github"></i></a>
+</div>
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand small-logo" href="../../">
+          <img src="../../_static/Psychopy Plugin Header Small.png" alt="PsychoPy Logo">
+        </a>
+        <a class="navbar-brand large-logo" href="../../">
+          <img src="../../_static/Psychopy Plugin Header Large.png" alt="PsychoPy Logo">
+        </a>
+        <!-- <span class="navbar-text navbar-version pull-right"><b></b></span> -->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse w-100 pull-right">
+          <ul class="nav navbar-nav ml-auto">
+            <li><a href="../../">Home</a></li>
+            <li><a href="../../download/">Install</a></li>
+            
+            <li><a href="https://plugins.psychopy.org/directory.html" class="return-btn">plugins.psychopy.org</a></li>
+            
+              <!-- <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../">Documentation <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Added content for the PsychoPy app</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../app/ExamplePluginRibbonSection/">ExamplePluginRibbonSection</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Added content for Builder</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../builder/components/ExampleComponent/">ExampleComponent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../builder/routines/ExampleStandaloneRoutine/">ExampleStandaloneRoutine</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Added content for Coder</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ExampleDevice/">ExampleDevice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ExampleResponseDevice/">ExampleResponseDevice</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ExampleVisualStim</a></li>
+</ul>
+</ul>
+</li> -->
+              
+            
+            <!--  -->
+            
+            
+          </ul>
+
+            <!-- 
+              
+<form class="navbar-form navbar-right" action="../../search/" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+             -->
+
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-9 content">
+      
+  <section id="examplevisualstim">
+<h1>ExampleVisualStim<a class="headerlink" href="#examplevisualstim" title="Link to this heading">¶</a></h1>
+<p>To import ExampleVisualStim, you can either use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">psychopy_plugin_template.hardware.exampleVisualStim</span> <span class="kn">import</span> <span class="n">ExampleVisualStim</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>or, any time after <cite>psychopy.plugins.activatePlugins</cite> has been called::</dt><dd><p>from psychopy.hardware import ExampleVisualStim</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">psychopy_plugin_template.visual.exampleVisualStim.</span></span><span class="sig-name descname"><span class="pre">ExampleVisualStim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">win</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoLog</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/psychopy_plugin_template/visual/exampleVisualStim/#ExampleVisualStim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim" title="Link to this definition">¶</a></dt>
+<dd><p>Blank visual stim to showcase how to make a new visual stim. Should be deleted before publishing your plugin.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>win</strong> (<em>psychopy.visual.Window</em>) – Window to draw stimulus to</p></li>
+<li><p><strong>units</strong> (<em>str</em>) – Spatial unit space in which to specify size, pos, etc. for stimulus.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Arbitrary name by which to refer to stimulus</p></li>
+<li><p><strong>autoLog</strong> (<em>bool</em>) – Whether to automatically log any changes to stimulus’ attributes</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.anchor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">anchor</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.anchor" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.autoDraw">
+<span class="sig-name descname"><span class="pre">autoDraw</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.autoDraw" title="Link to this definition">¶</a></dt>
+<dd><p>Determines whether the stimulus should be automatically drawn
+on every frame flip.</p>
+<p>Value should be: <cite>True</cite> or <cite>False</cite>. You do NOT need to set this
+on every frame flip!</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.autoLog">
+<span class="sig-name descname"><span class="pre">autoLog</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.autoLog" title="Link to this definition">¶</a></dt>
+<dd><p>Whether every change in this stimulus should be auto logged.</p>
+<p>Value should be: <cite>True</cite> or <cite>False</cite>. Set to <cite>False</cite> if your stimulus is
+updating frequently (e.g. updating its position every frame) and you
+want to avoid swamping the log file with messages that aren’t likely to
+be useful.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.depth">
+<span class="sig-name descname"><span class="pre">depth</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.depth" title="Link to this definition">¶</a></dt>
+<dd><p>DEPRECATED, depth is now controlled simply by drawing order.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.draw">
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/psychopy_plugin_template/visual/exampleVisualStim/#ExampleVisualStim.draw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.draw" title="Link to this definition">¶</a></dt>
+<dd><p>Your stimulus class needs to define a <cite>draw</cite> function - otherwise you’ll hit a NotImplementedError at the first win flip!</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.exampleAttribute">
+<span class="sig-name descname"><span class="pre">exampleAttribute</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.exampleAttribute" title="Link to this definition">¶</a></dt>
+<dd><p>Example attribute to show how to use the attributeSetter decorator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – Whatever value you want to set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.flip">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">flip</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.flip" title="Link to this definition">¶</a></dt>
+<dd><p>1x2 array for flipping vertices along each axis; set as True to flip or False to not flip. If set as a single value, will duplicate across both axes. Accessing the protected attribute (<cite>._flip</cite>) will give an array of 1s and -1s with which to multiply vertices.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.flipHoriz">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">flipHoriz</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.flipHoriz" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.flipVert">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">flipVert</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.flipVert" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getAnchor">
+<span class="sig-name descname"><span class="pre">getAnchor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getAnchor" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getAutoDraw">
+<span class="sig-name descname"><span class="pre">getAutoDraw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getAutoDraw" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getAutoLog">
+<span class="sig-name descname"><span class="pre">getAutoLog</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getAutoLog" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getDepth">
+<span class="sig-name descname"><span class="pre">getDepth</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getDepth" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getExampleAttribute">
+<span class="sig-name descname"><span class="pre">getExampleAttribute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getExampleAttribute" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getFlip">
+<span class="sig-name descname"><span class="pre">getFlip</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getFlip" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getFlipHoriz">
+<span class="sig-name descname"><span class="pre">getFlipHoriz</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getFlipHoriz" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getFlipVert">
+<span class="sig-name descname"><span class="pre">getFlipVert</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getFlipVert" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getHeight">
+<span class="sig-name descname"><span class="pre">getHeight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getHeight" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getName">
+<span class="sig-name descname"><span class="pre">getName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getOpacity">
+<span class="sig-name descname"><span class="pre">getOpacity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getOpacity" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getOri">
+<span class="sig-name descname"><span class="pre">getOri</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getOri" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getPos">
+<span class="sig-name descname"><span class="pre">getPos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getPos" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getSize">
+<span class="sig-name descname"><span class="pre">getSize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getSize" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getUnits">
+<span class="sig-name descname"><span class="pre">getUnits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getUnits" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getVertices">
+<span class="sig-name descname"><span class="pre">getVertices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getVertices" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getWidth">
+<span class="sig-name descname"><span class="pre">getWidth</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getWidth" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getWin">
+<span class="sig-name descname"><span class="pre">getWin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.getWin" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.height">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">height</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.height" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.name" title="Link to this definition">¶</a></dt>
+<dd><p>The name (<cite>str</cite>) of the object to be using during logged messages
+about this stim. If you have multiple stimuli in your experiment this
+really helps to make sense of log files!</p>
+<p>If name = None your stimulus will be called “unnamed &lt;type&gt;”, e.g.
+visual.TextStim(win) will be called “unnamed TextStim” in the logs.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.opacity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">opacity</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.opacity" title="Link to this definition">¶</a></dt>
+<dd><p>Determines how visible the stimulus is relative to background.</p>
+<p>The value should be a single float ranging 1.0 (opaque) to 0.0
+(transparent). <span class="xref std std-ref">Operations</span> are supported.
+Precisely how this is used depends on the <span class="xref std std-ref">blendMode</span>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.ori">
+<span class="sig-name descname"><span class="pre">ori</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.ori" title="Link to this definition">¶</a></dt>
+<dd><p>The orientation of the stimulus (in degrees).</p>
+<p>Should be a single value (<span class="xref std std-ref">scalar</span>).
+<span class="xref std std-ref">Operations</span> are supported.</p>
+<p>Orientation convention is like a clock: 0 is vertical, and positive
+values rotate clockwise. Beyond 360 and below zero values wrap
+appropriately.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.pos">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pos</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.pos" title="Link to this definition">¶</a></dt>
+<dd><p>The position of the center of the stimulus in the stimulus
+<span class="xref std std-ref">units</span></p>
+<p><cite>value</cite> should be an <span class="xref std std-ref">x,y-pair</span>.
+<span class="xref std std-ref">Operations</span> are also supported.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stim</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># Set slightly to the right of center</span>
+<span class="n">stim</span><span class="o">.</span><span class="n">pos</span> <span class="o">+=</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Increment pos rightwards and upwards.</span>
+    <span class="n">Is</span> <span class="n">now</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">stim</span><span class="o">.</span><span class="n">pos</span> <span class="o">*=</span> <span class="mf">0.2</span>  <span class="c1"># Move stim towards the center.</span>
+    <span class="n">Is</span> <span class="n">now</span> <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Tip: If you need the position of stim in pixels, you can obtain
+it like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">psychopy.tools.monitorunittools</span> <span class="kn">import</span> <span class="n">posToPix</span>
+<span class="n">posPix</span> <span class="o">=</span> <span class="n">posToPix</span><span class="p">(</span><span class="n">stim</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setAnchor">
+<span class="sig-name descname"><span class="pre">setAnchor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setAnchor" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setAutoDraw">
+<span class="sig-name descname"><span class="pre">setAutoDraw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setAutoDraw" title="Link to this definition">¶</a></dt>
+<dd><p>Sets autoDraw. Usually you can use ‘stim.attribute = value’
+syntax instead, but use this method to suppress the log message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setAutoLog">
+<span class="sig-name descname"><span class="pre">setAutoLog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setAutoLog" title="Link to this definition">¶</a></dt>
+<dd><p>Usually you can use ‘stim.attribute = value’ syntax instead,
+but use this method if you need to suppress the log message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setDepth">
+<span class="sig-name descname"><span class="pre">setDepth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newDepth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setDepth" title="Link to this definition">¶</a></dt>
+<dd><p>Usually you can use ‘stim.attribute = value’ syntax instead,
+but use this method if you need to suppress the log message</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setExampleAttribute">
+<span class="sig-name descname"><span class="pre">setExampleAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/psychopy_plugin_template/visual/exampleVisualStim/#ExampleVisualStim.setExampleAttribute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setExampleAttribute" title="Link to this definition">¶</a></dt>
+<dd><p>If an attribute can be set each frame/repeat from Builder, there needs to be a function called set&lt;attribute name in PascalCase&gt; as this will be called from the generated code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>any</em>) – Whatever value you want to set</p></li>
+<li><p><strong>log</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not to log setting this attribute - will be True for set each repeat and False for set each frame</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setFlip">
+<span class="sig-name descname"><span class="pre">setFlip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stealth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setFlip" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setFlipHoriz">
+<span class="sig-name descname"><span class="pre">setFlipHoriz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stealth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setFlipHoriz" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setFlipVert">
+<span class="sig-name descname"><span class="pre">setFlipVert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stealth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setFlipVert" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setHeight">
+<span class="sig-name descname"><span class="pre">setHeight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stealth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setHeight" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setName">
+<span class="sig-name descname"><span class="pre">setName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stealth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setOpacity">
+<span class="sig-name descname"><span class="pre">setOpacity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newOpacity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setOpacity" title="Link to this definition">¶</a></dt>
+<dd><p>Hard setter for opacity, allows the suppression of log messages and calls the update method</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setOri">
+<span class="sig-name descname"><span class="pre">setOri</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newOri</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setOri" title="Link to this definition">¶</a></dt>
+<dd><p>Usually you can use ‘stim.attribute = value’ syntax instead,
+but use this method if you need to suppress the log message</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setPos">
+<span class="sig-name descname"><span class="pre">setPos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newPos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setPos" title="Link to this definition">¶</a></dt>
+<dd><p>Usually you can use ‘stim.attribute = value’ syntax instead,
+but use this method if you need to suppress the log message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setSize">
+<span class="sig-name descname"><span class="pre">setSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newSize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setSize" title="Link to this definition">¶</a></dt>
+<dd><p>Usually you can use ‘stim.attribute = value’ syntax instead,
+but use this method if you need to suppress the log message</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setUnits">
+<span class="sig-name descname"><span class="pre">setUnits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stealth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setUnits" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setVertices">
+<span class="sig-name descname"><span class="pre">setVertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stealth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setVertices" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setWidth">
+<span class="sig-name descname"><span class="pre">setWidth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stealth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setWidth" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setWin">
+<span class="sig-name descname"><span class="pre">setWin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stealth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.setWin" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.size" title="Link to this definition">¶</a></dt>
+<dd><p>The size (width, height) of the stimulus in the stimulus
+<span class="xref std std-ref">units</span></p>
+<p>Value should be <span class="xref std std-ref">x,y-pair</span>,
+<span class="xref std std-ref">scalar</span> (applies to both dimensions)
+or None (resets to default). <span class="xref std std-ref">Operations</span>
+are supported.</p>
+<p>Sizes can be negative (causing a mirror-image reversal) and can
+extend beyond the window.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stim</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="mf">0.8</span>  <span class="c1"># Set size to (xsize, ysize) = (0.8, 0.8)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stim</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>  <span class="c1"># Outputs array([0.8, 0.8])</span>
+<span class="n">stim</span><span class="o">.</span><span class="n">size</span> <span class="o">+=</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># make wider and flatter: (1.3, 0.3)</span>
+</pre></div>
+</div>
+<p>Tip: if you can see the actual pixel range this corresponds to by
+looking at <cite>stim._sizeRendered</cite></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.units">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">units</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.units" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.updateOpacity">
+<span class="sig-name descname"><span class="pre">updateOpacity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.updateOpacity" title="Link to this definition">¶</a></dt>
+<dd><p>Placeholder method to update colours when set externally, for example
+updating the <cite>pallette</cite> attribute of a textbox.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.vertices">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">vertices</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.vertices" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.width">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">width</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.width" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.win">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">win</span></span><a class="headerlink" href="#psychopy_plugin_template.visual.exampleVisualStim.ExampleVisualStim.win" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Window</span></code> object in which the
+stimulus will be rendered by default. (required)</p>
+<p>Example, drawing same stimulus in two different windows and display
+simultaneously. Assuming that you have two windows and a stimulus
+(win1, win2 and stim):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stim</span><span class="o">.</span><span class="n">win</span> <span class="o">=</span> <span class="n">win1</span>  <span class="c1"># stimulus will be drawn in win1</span>
+<span class="n">stim</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>  <span class="c1"># stimulus is now drawn to win1</span>
+<span class="n">stim</span><span class="o">.</span><span class="n">win</span> <span class="o">=</span> <span class="n">win2</span>  <span class="c1"># stimulus will be drawn in win2</span>
+<span class="n">stim</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>  <span class="c1"># it is now drawn in win2</span>
+<span class="n">win1</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">waitBlanking</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># do not wait for next</span>
+             <span class="c1"># monitor update</span>
+<span class="n">win2</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>  <span class="c1"># wait for vertical blanking.</span>
+</pre></div>
+</div>
+<p>Note that this just changes <strong>default</strong> window for stimulus.</p>
+<p>You could also specify window-to-draw-to when drawing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stim</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">win1</span><span class="p">)</span>
+<span class="n">stim</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">win2</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+      <br/><a href="#" class="pull-right">Back to top</a>
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <span class="pull-right">
+      
+        
+<div id="sourcelink">
+  <a href="https://github.com/psychopy/psychopy/blob/master/docs/source/coder/ExampleVisualStim.rst"
+     rel="nofollow">Source</a>
+</div>
+      <br/>
+
+          &copy; 2002-2018 <a href="https://www.peirce.org.uk/">Jonathan Peirce</a><br/>
+          &copy; 2019 <a href="https://opensciencetools.org/">Open Science Tools Ltd.</a><br/><br/>
+        PsychoPy<sup>®</sup> and Pavlovia<sup>®</sup> are registered trademarks of Open Science Tools Ltd.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.3.7.<br/><br/>
+    </span>
+
+    <a href="http://www.nottingham.ac.uk/"><img src="../../_static/Nottingham Supported.png", alt="Uni of Nottingham" width=250></a>
+  </div>
+
+</footer>
+  </body>
+</html>
