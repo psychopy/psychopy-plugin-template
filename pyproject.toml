@@ -25,6 +25,7 @@ changelog = "https://github.com/psychopy/psychopy-plugin-template/blob/main/CHAN
 # dependencies for building the docs
 docs = [
   "psychopy",
+  "psychopy-plugin-theme",
   "sphinx",
   "furo",
 ]
