@@ -118,7 +118,7 @@ class ExampleComponent(BaseComponent):
         if dedent:
             # here we can just add anything we want to happen each frame - let's update some arbitrary variable for fun
             code = (
-                "%(name)s.someAttribute = randchoice(['a', 'b', 'c']))\n"
+                "%(name)s.someAttribute = randchoice(['a', 'b', 'c'])\n"
             )
             buff.writeIndentedLines(code % self.params)
             # dedent after!
